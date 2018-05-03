@@ -24,7 +24,8 @@ class MusicLibraryController
   end
  
   def list_songs
-    
+    sorted_songs = Song.all.sort
+    #1. Thundercat - For Love I Come - dance
   end
   
   def not_a_method 
