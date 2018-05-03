@@ -24,8 +24,11 @@ class MusicLibraryController
   end
  
   def list_songs
-    sorted_songs = Song.all.sort
-    #1. Thundercat - For Love I Come - dance
+    sorted_songs = Song.all.sort{|song| song.name}
+    sorted_songs.each_with_index do |song, i|
+      puts "#{i + 1}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
+      #format => 1. Thundercat - For Love I Come - dance
+    end
   end
   
   def not_a_method 
