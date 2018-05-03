@@ -27,11 +27,11 @@ class MusicLibraryController
       elsif input == 'list genres'
         self.list_genres 
       elsif input == 'list artist'
-        #list all songs by artist 
+        self.list_songs_by_artist 
       elsif input == 'list genre'
-        #list all songs by genre 
+        self.list_songs_by_genre 
       elsif input == 'play song'
-        #play a song 
+        self.play_song 
       end
     end
   end
@@ -97,21 +97,5 @@ class MusicLibraryController
     end
   end
   
-  
-  def not_a_method 
-    if input == 'list songs'
-        #list songs 
-    elsif input == 'list artists'
-        #list artists
-    elsif input == 'list genres'
-        #list genres 
-    elsif input == 'list artist'
-        #list all songs by artist 
-    elsif input == 'list genre'
-        #list all songs by genre 
-    elsif input == 'play song'
-        #play a song 
-    end
-  end
   
 end
