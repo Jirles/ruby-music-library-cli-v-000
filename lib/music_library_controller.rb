@@ -20,6 +20,19 @@ class MusicLibraryController
       puts "To quit, type 'exit'."
       puts "What would you like to do?"
       input = gets.chomp
+      if input == 'list songs'
+        self.list_songs 
+      elsif input == 'list artists'
+        self.list_artists
+      elsif input == 'list genres'
+        self.list_genres 
+      elsif input == 'list artist'
+        #list all songs by artist 
+      elsif input == 'list genre'
+        #list all songs by genre 
+      elsif input == 'play song'
+        #play a song 
+      end
     end
   end
  
