@@ -55,7 +55,7 @@ class MusicLibraryController
       sorted = artist.songs.sort{|song, song2| song.name <=> song2.name}
       
       sorted.each_with_index do |song, i|
-        puts "#{i + 1}. #{song.name} - #{song.genre}"
+        puts "#{i + 1}. #{song.name} - #{song.genre.name}"
         #output format => "1. Green Aisles - country"
       end
     end
