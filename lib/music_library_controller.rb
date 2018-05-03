@@ -75,6 +75,13 @@ class MusicLibraryController
     end
   end
   
+  def play_song
+    self.list_songs 
+    
+    
+  end
+  
+  
   def not_a_method 
     if input == 'list songs'
         #list songs 
