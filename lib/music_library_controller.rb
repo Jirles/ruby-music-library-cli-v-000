@@ -61,6 +61,20 @@ class MusicLibraryController
     end
   end
   
+  def list_songs_by_genre
+    puts "Please enter the name of a genre:"
+    genre_name = gets.chomp
+    if Genre.find_by_name(genre_name)
+      genre = Genre.find_by_name(genre_name)
+      sorted = genre.songs.sort{|song, song2| song.name <=> song2.name}
+      
+      sorted.each_with_index do |song, i|
+        puts "#{i + 1}. #{song.name} - #{song.genre.name}"
+        #output format => "1. Green Aisles - country"
+      end
+    end
+  end
+  
   def not_a_method 
     if input == 'list songs'
         #list songs 
