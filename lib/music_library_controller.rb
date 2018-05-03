@@ -52,7 +52,9 @@ class MusicLibraryController
     artist_name = gets.chomp
     if Artist.find_by_name(artist_name)
       artist = Artist.find_by_name(artist_name)
-      artist.songs.each_with_index do |song, i|
+      sorted = artist.songs.sort{|song, song2| song.name <=> song2.name}
+      
+      sorted.each_with_index do |song, i|
         puts "#{i + 1}. #{song.name} - #{song.genre}"
         #output format => "1. Green Aisles - country"
       end
