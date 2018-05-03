@@ -48,15 +48,14 @@ class MusicLibraryController
   end
   
   def list_songs_by_artist
-    artist_name = nil
-    unless artist_name.class == Artist 
-      puts "Please enter the name of an artist:"
-      artist_name = gets.chomp
-    end
-    artist = Artist.find_by_name(artist_name)
-    artist.songs.each_with_index do |song, i|
-      puts "#{i + 1}. #{song.name} - #{song.genre}"
-      #output format => "1. Green Aisles - country"
+    puts "Please enter the name of an artist:"
+    artist_name = gets.chomp
+    if Artist.find_by_name(artist_name)
+      artist = Artist.find_by_name(artist_name)
+      artist.songs.each_with_index do |song, i|
+        puts "#{i + 1}. #{song.name} - #{song.genre}"
+        #output format => "1. Green Aisles - country"
+      end
     end
   end
   
