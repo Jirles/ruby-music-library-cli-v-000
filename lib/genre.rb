@@ -3,6 +3,7 @@
 class Genre 
   
   attr_accessor :name, :artist
+  attr_reader :songs 
   extend Concerns::Findable
   
   @@all = []
@@ -28,10 +29,6 @@ class Genre
     self.new(name).tap do |instance|
       instance.save
     end
-  end
-  
-  def songs 
-    @songs 
   end
 
   def add_song(song)
