@@ -22,21 +22,27 @@ class MusicLibraryController
       input = gets.chomp
     end
   end
+ 
+  def list_songs
+    
+  end
   
-  if input == 'list songs'
-      #list songs 
-    elsif input == 'list artists'
-      #list artists
-    elsif input == 'list genres'
-      #list genres 
-    elsif input == 'list artist'
-      #list all songs by artist 
-    elsif input == 'list genre'
-      #list all songs by genre 
-    elsif input == 'play song'
-      #play a song 
-    else 
-      break
+  def not_a_method 
+    if input == 'list songs'
+        #list songs 
+      elsif input == 'list artists'
+        #list artists
+      elsif input == 'list genres'
+        #list genres 
+      elsif input == 'list artist'
+        #list all songs by artist 
+      elsif input == 'list genre'
+        #list all songs by genre 
+      elsif input == 'play song'
+        #play a song 
+      else 
+        break
+      end
     end
   
 end
